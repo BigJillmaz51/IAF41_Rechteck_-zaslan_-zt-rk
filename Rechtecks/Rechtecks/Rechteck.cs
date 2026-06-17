@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -59,17 +61,28 @@ namespace Rechtecks
         }
         public double Flaeche
         {
-            //orientiere dich an der Eigenschaft Umfang 
+            
             get
             {
                 return hoehe * breite;
             }
-            
-
-            
 
         }
+        public double Diagonal
+        {
+            //orientiere dich an der Eigenschaft Diagonale
+            get
+            {
+                return Math.Sqrt((breite * breite)+(hoehe * hoehe));
+            }
 
+        }
+        public Rechteck(double hoeheDesRechtecks, double breiteDesRechtecks)
+        {
+            // Aufruf der Setter für jede Eigenschaft
+            Breite = breiteDesRechtecks;
+            Hoehe = hoeheDesRechtecks;
+        }
 
     }
 }
