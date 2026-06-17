@@ -18,7 +18,7 @@ namespace Rechtecks
             get { return hoehe; }
             set
             {
-                // TODO: Wert prüfen: muss > 0 sein 
+                
                 if (value > 0)
                 {
                     hoehe = value;
@@ -82,6 +82,26 @@ namespace Rechtecks
             // Aufruf der Setter für jede Eigenschaft
             Breite = breiteDesRechtecks;
             Hoehe = hoeheDesRechtecks;
+        }
+
+        // Rechteck zoomen (vergrößern oder verkleinern)
+        public void Zoomen(double faktor)
+        {
+            if (faktor <= 0)
+            {
+                throw new ArgumentException("Faktor muss größer als 0 sein!");
+            }
+
+            Hoehe *= faktor;
+            Breite *= faktor;
+        }
+
+        // Rechteck um 90° drehen (Breite und Höhe tauschen)
+        public void Drehen()
+        {
+            double temp = hoehe;
+            hoehe = breite;
+            breite = temp;
         }
 
     }
