@@ -85,7 +85,7 @@
             tbxFläche.Name = "tbxFläche";
             tbxFläche.Size = new Size(100, 23);
             tbxFläche.TabIndex = 4;
-            tbxFläche.TextChanged += textBox1_TextChanged;
+            
             // 
             // tbxUmfang
             // 
@@ -163,7 +163,7 @@
             lblDiagonal.Size = new Size(60, 15);
             lblDiagonal.TabIndex = 13;
             lblDiagonal.Text = "Diagonal :";
-            lblDiagonal.Click += label2_Click;
+            
             // 
             // tbxZoom
             // 
