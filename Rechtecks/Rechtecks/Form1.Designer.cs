@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             tbxHöhe = new TextBox();
             tbxBreite = new TextBox();
             lblHöhe = new Label();
@@ -205,6 +206,7 @@
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
+
         }
 
         #endregion
