@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-            tbxHöhe = new TextBox();
+            tbxHoehe = new TextBox();
             tbxBreite = new TextBox();
             lblHöhe = new Label();
             lblBreite = new Label();
-            tbxFläche = new TextBox();
+            tbxFlaeche = new TextBox();
             tbxUmfang = new TextBox();
             lblUmfang = new Label();
             lblFläche = new Label();
@@ -43,151 +42,168 @@
             btnBerechnen = new Button();
             tbxDiagonal = new TextBox();
             lblDiagonal = new Label();
-            tbxZoom = new TextBox();
+            tbxFaktor = new TextBox();
             lblZoom = new Label();
             SuspendLayout();
             // 
-            // tbxHöhe
+            // tbxHoehe
             // 
-            tbxHöhe.Location = new Point(242, 56);
-            tbxHöhe.Name = "tbxHöhe";
-            tbxHöhe.Size = new Size(100, 23);
-            tbxHöhe.TabIndex = 0;
+            tbxHoehe.Location = new Point(449, 119);
+            tbxHoehe.Margin = new Padding(6);
+            tbxHoehe.Name = "tbxHoehe";
+            tbxHoehe.Size = new Size(182, 39);
+            tbxHoehe.TabIndex = 0;
             // 
             // tbxBreite
             // 
-            tbxBreite.Location = new Point(242, 100);
+            tbxBreite.Location = new Point(449, 213);
+            tbxBreite.Margin = new Padding(6);
             tbxBreite.Name = "tbxBreite";
-            tbxBreite.Size = new Size(100, 23);
+            tbxBreite.Size = new Size(182, 39);
             tbxBreite.TabIndex = 1;
             // 
             // lblHöhe
             // 
             lblHöhe.AutoSize = true;
-            lblHöhe.Location = new Point(242, 38);
+            lblHöhe.Location = new Point(449, 81);
+            lblHöhe.Margin = new Padding(6, 0, 6, 0);
             lblHöhe.Name = "lblHöhe";
-            lblHöhe.Size = new Size(42, 15);
+            lblHöhe.Size = new Size(84, 32);
             lblHöhe.TabIndex = 2;
             lblHöhe.Text = "Höhe :";
             // 
             // lblBreite
             // 
             lblBreite.AutoSize = true;
-            lblBreite.Location = new Point(242, 82);
+            lblBreite.Location = new Point(449, 175);
+            lblBreite.Margin = new Padding(6, 0, 6, 0);
             lblBreite.Name = "lblBreite";
-            lblBreite.Size = new Size(43, 15);
+            lblBreite.Size = new Size(88, 32);
             lblBreite.TabIndex = 3;
             lblBreite.Text = "Breite :";
             // 
-            // tbxFläche
+            // tbxFlaeche
             // 
-            tbxFläche.Location = new Point(242, 143);
-            tbxFläche.Name = "tbxFläche";
-            tbxFläche.Size = new Size(100, 23);
-            tbxFläche.TabIndex = 4;
-            
+            tbxFlaeche.Location = new Point(449, 305);
+            tbxFlaeche.Margin = new Padding(6);
+            tbxFlaeche.Name = "tbxFlaeche";
+            tbxFlaeche.Size = new Size(182, 39);
+            tbxFlaeche.TabIndex = 4;
             // 
             // tbxUmfang
             // 
-            tbxUmfang.Location = new Point(242, 189);
+            tbxUmfang.Location = new Point(449, 403);
+            tbxUmfang.Margin = new Padding(6);
             tbxUmfang.Name = "tbxUmfang";
-            tbxUmfang.Size = new Size(100, 23);
+            tbxUmfang.Size = new Size(182, 39);
             tbxUmfang.TabIndex = 5;
             // 
             // lblUmfang
             // 
             lblUmfang.AutoSize = true;
-            lblUmfang.Location = new Point(242, 171);
+            lblUmfang.Location = new Point(449, 365);
+            lblUmfang.Margin = new Padding(6, 0, 6, 0);
             lblUmfang.Name = "lblUmfang";
-            lblUmfang.Size = new Size(56, 15);
+            lblUmfang.Size = new Size(111, 32);
             lblUmfang.TabIndex = 6;
             lblUmfang.Text = "Umfang :";
             // 
             // lblFläche
             // 
             lblFläche.AutoSize = true;
-            lblFläche.Location = new Point(242, 126);
+            lblFläche.Location = new Point(449, 269);
+            lblFläche.Margin = new Padding(6, 0, 6, 0);
             lblFläche.Name = "lblFläche";
-            lblFläche.Size = new Size(47, 15);
+            lblFläche.Size = new Size(94, 32);
             lblFläche.TabIndex = 7;
             lblFläche.Text = "Fläche :";
             // 
             // btnZoom
             // 
-            btnZoom.Location = new Point(242, 328);
+            btnZoom.Location = new Point(449, 700);
+            btnZoom.Margin = new Padding(6);
             btnZoom.Name = "btnZoom";
-            btnZoom.Size = new Size(75, 23);
+            btnZoom.Size = new Size(139, 49);
             btnZoom.TabIndex = 8;
             btnZoom.Text = "Zoom";
             btnZoom.UseVisualStyleBackColor = true;
+            btnZoom.Click += btnZoom_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Location = new Point(0, 0);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(78, 32);
             label1.TabIndex = 9;
             label1.Text = "label1";
             // 
             // btnDrehen
             // 
-            btnDrehen.Location = new Point(411, 142);
+            btnDrehen.Location = new Point(763, 303);
+            btnDrehen.Margin = new Padding(6);
             btnDrehen.Name = "btnDrehen";
-            btnDrehen.Size = new Size(75, 23);
+            btnDrehen.Size = new Size(139, 49);
             btnDrehen.TabIndex = 10;
             btnDrehen.Text = "Drehen 90°";
             btnDrehen.UseVisualStyleBackColor = true;
+            btnDrehen.Click += btnDrehen_Click;
             // 
             // btnBerechnen
             // 
-            btnBerechnen.Location = new Point(411, 189);
+            btnBerechnen.Location = new Point(763, 403);
+            btnBerechnen.Margin = new Padding(6);
             btnBerechnen.Name = "btnBerechnen";
-            btnBerechnen.Size = new Size(75, 23);
+            btnBerechnen.Size = new Size(139, 49);
             btnBerechnen.TabIndex = 11;
             btnBerechnen.Text = "Berechnen";
             btnBerechnen.UseVisualStyleBackColor = true;
+            btnBerechnen.Click += btnBerechnen_Click;
             // 
             // tbxDiagonal
             // 
-            tbxDiagonal.Location = new Point(242, 244);
+            tbxDiagonal.Location = new Point(449, 521);
+            tbxDiagonal.Margin = new Padding(6);
             tbxDiagonal.Name = "tbxDiagonal";
-            tbxDiagonal.Size = new Size(100, 23);
+            tbxDiagonal.Size = new Size(182, 39);
             tbxDiagonal.TabIndex = 12;
             // 
             // lblDiagonal
             // 
             lblDiagonal.AutoSize = true;
-            lblDiagonal.Location = new Point(242, 226);
+            lblDiagonal.Location = new Point(449, 482);
+            lblDiagonal.Margin = new Padding(6, 0, 6, 0);
             lblDiagonal.Name = "lblDiagonal";
-            lblDiagonal.Size = new Size(60, 15);
+            lblDiagonal.Size = new Size(121, 32);
             lblDiagonal.TabIndex = 13;
             lblDiagonal.Text = "Diagonal :";
-            
             // 
-            // tbxZoom
+            // tbxFaktor
             // 
-            tbxZoom.Location = new Point(242, 299);
-            tbxZoom.Name = "tbxZoom";
-            tbxZoom.Size = new Size(100, 23);
-            tbxZoom.TabIndex = 14;
+            tbxFaktor.Location = new Point(449, 638);
+            tbxFaktor.Margin = new Padding(6);
+            tbxFaktor.Name = "tbxFaktor";
+            tbxFaktor.Size = new Size(182, 39);
+            tbxFaktor.TabIndex = 14;
             // 
             // lblZoom
             // 
             lblZoom.AutoSize = true;
-            lblZoom.Location = new Point(242, 281);
+            lblZoom.Location = new Point(449, 599);
+            lblZoom.Margin = new Padding(6, 0, 6, 0);
             lblZoom.Name = "lblZoom";
-            lblZoom.Size = new Size(81, 15);
+            lblZoom.Size = new Size(161, 32);
             lblZoom.TabIndex = 15;
             lblZoom.Text = "Zoom Faktor :";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1486, 960);
             Controls.Add(lblZoom);
-            Controls.Add(tbxZoom);
+            Controls.Add(tbxFaktor);
             Controls.Add(lblDiagonal);
             Controls.Add(tbxDiagonal);
             Controls.Add(btnBerechnen);
@@ -197,25 +213,25 @@
             Controls.Add(lblFläche);
             Controls.Add(lblUmfang);
             Controls.Add(tbxUmfang);
-            Controls.Add(tbxFläche);
+            Controls.Add(tbxFlaeche);
             Controls.Add(lblBreite);
             Controls.Add(lblHöhe);
             Controls.Add(tbxBreite);
-            Controls.Add(tbxHöhe);
+            Controls.Add(tbxHoehe);
+            Margin = new Padding(6);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
-
         }
 
         #endregion
 
-        private TextBox tbxHöhe;
+        private TextBox tbxHoehe;
         private TextBox tbxBreite;
         private Label lblHöhe;
         private Label lblBreite;
-        private TextBox tbxFläche;
+        private TextBox tbxFlaeche;
         private TextBox tbxUmfang;
         private Label lblUmfang;
         private Label lblFläche;
@@ -225,7 +241,7 @@
         private Button btnBerechnen;
         private TextBox tbxDiagonal;
         private Label lblDiagonal;
-        private TextBox tbxZoom;
+        private TextBox tbxFaktor;
         private Label lblZoom;
     }
 }

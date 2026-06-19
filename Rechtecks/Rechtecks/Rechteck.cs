@@ -1,108 +1,84 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rechtecks
 {
     internal class Rechteck
     {
-        private double hoehe;
-        private double breite;
-        // Eigenschaften 
+        private double hoehe; // Höhe vom Rechteck
+        private double breite; // Breite vom Rechteck
+
         public double Hoehe
         {
             get { return hoehe; }
             set
             {
-                
+                // nur erlauben wenn größer als 0
                 if (value > 0)
                 {
                     hoehe = value;
                 }
                 else
                 {
-                    // Exception werfen 
                     throw new Exception("Höhe muss größer als 0 sein!");
                 }
             }
         }
         public double Breite
         {
-            //analog zur Eigenschaft breite 
             get { return breite; }
             set
             {
+                // nur erlauben wenn größer als 0
                 if (value > 0)
                 {
                     breite = value;
                 }
                 else
                 {
-                    // Exception werfen
                     throw new Exception("Breite muss größer als 0 sein!");
                 }
             }
         }
-        // Schreibgeschützte Eigenschaften (berechnet) 
+
+        // Umfang berechnen
         public double Umfang
         {
-            get
-            {
-                //Umfang wird mit Formel berechnet, dann mit return zurückgegeben 
-                return 2 * hoehe + 2 * breite;
-
-
-            }
-
+            get { return 2 * Hoehe + 2 * Breite; }
         }
+        // Fläche berechnen
         public double Flaeche
         {
-            
-            get
-            {
-                return hoehe * breite;
-            }
-
+            get { return Hoehe * Breite; }
         }
+        // Diagonale berechnen
         public double Diagonal
         {
-            //orientiere dich an der Eigenschaft Diagonale
-            get
-            {
-                return Math.Sqrt((breite * breite)+(hoehe * hoehe));
-            }
-
+            get { return Math.Sqrt(Breite * Breite + Hoehe * Hoehe); }
         }
         public Rechteck(double hoeheDesRechtecks, double breiteDesRechtecks)
         {
-            // Aufruf der Setter für jede Eigenschaft
-            Breite = breiteDesRechtecks;
+            // Werte setzen beim Erstellen
             Hoehe = hoeheDesRechtecks;
+            Breite = breiteDesRechtecks;
         }
-
-        // Rechteck zoomen (vergrößern oder verkleinern)
         public void Zoomen(double faktor)
         {
+            // check ob faktor ok ist
             if (faktor <= 0)
             {
-                throw new ArgumentException("Faktor muss größer als 0 sein!");
+                throw new Exception("Der Faktor muss größer als 0 sein!");
             }
 
+            // Größe ändern
             Hoehe *= faktor;
             Breite *= faktor;
         }
-
-        // Rechteck um 90° drehen (Breite und Höhe tauschen)
         public void Drehen()
         {
-            double temp = hoehe;
-            hoehe = breite;
-            breite = temp;
+            // Höhe und Breite tauschen
+            double temp = Hoehe;
+            Hoehe = Breite;
+            Breite = temp;
         }
-
     }
 }
